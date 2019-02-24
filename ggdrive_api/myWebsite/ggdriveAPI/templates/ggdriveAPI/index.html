@@ -1,0 +1,11 @@
+<p>Please select your resources:</p>
+{% if resources %}
+    <ul>
+    {% for name in resources %}
+        <li><a href="/ggdriveAPI/{{ name.lower }}/">{{ name }}</a></li>
+        <p></p>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No resources are available.</p>
+{% endif %}
